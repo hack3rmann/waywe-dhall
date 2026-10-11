@@ -1,0 +1,23 @@
+[package]
+name = "waywe_dhall_proc_macros"
+# remember to update html_root_url
+version = "0.6.1"
+authors.workspace = true
+license.workspace = true
+description = "Macros for the waywe_serde_dhall crate"
+readme = "README.md"
+repository.workspace = true
+edition.workspace = true
+include = ["src/**/*", "README.md", "LICENSE"]
+
+[lib]
+proc-macro = true
+doctest = false
+
+[dependencies]
+quote = "1.0"
+proc-macro2 = "1.0"
+syn = "1.0"
+
+[dev-dependencies]
+version-sync = "0.9"

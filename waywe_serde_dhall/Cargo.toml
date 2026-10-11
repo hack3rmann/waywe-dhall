@@ -1,0 +1,30 @@
+[package]
+name = "waywe_serde_dhall"
+# remember to update html_root_url, README and changelog
+version = "0.13.0"
+authors.workspace = true
+license.workspace = true
+description = "Dhall support for serde"
+readme = "../README.md"
+repository.workspace = true
+keywords = ["serde", "serialization", "dhall"]
+edition.workspace = true
+include = ["src/**/*", "LICENSE"]
+
+[features]
+default = ["reqwest"]
+reqwest = ["waywe_dhall/reqwest"]
+
+[dependencies]
+thiserror.workspace = true
+serde = { version = "1.0", features = ["derive"] }
+waywe_dhall = { version = "=0.13.0", path = "../waywe_dhall", default-features = false }
+waywe_dhall_proc_macros = { version = "=0.6.1", path = "../waywe_dhall_proc_macros" }
+doc-comment = "0.3"
+url = "2.1"
+
+[target.'cfg(target_arch = "wasm32")'.dev-dependencies]
+wasm-bindgen-test = "0.3"
+
+[dev-dependencies]
+version-sync = "0.9"

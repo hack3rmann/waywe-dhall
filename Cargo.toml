@@ -1,0 +1,21 @@
+[workspace]
+resolver = "3"
+members = [
+    "waywe_dhall",
+    "waywe_dhall_proc_macros",
+    "waywe_serde_dhall",
+]
+
+[workspace.package]
+edition = "2024"
+license = "BSD-2-Clause"
+authors = [
+    "NanoTech <nanotech@nanotechcorp.net>",
+    "Nadrieril <nadrieril@users.noreply.github.com>",
+    "Varov Svyatoslav <slava-varov3@mail.ru>",
+    "Alexander Filimonov <arnodarkrose@duck.com>",
+]
+repository = "https://github.com/hack3rmann/waywe-dhall"
+
+[workspace.dependencies]
+thiserror = "2.0.11"
